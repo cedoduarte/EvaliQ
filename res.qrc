@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>json/questions.json</file>
+        <file>qml/questionarie.qml</file>
+    </qresource>
+</RCC>
