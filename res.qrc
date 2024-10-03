@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>json/questions.json</file>
-        <file>qml/questionarie.qml</file>
+        <file>qml/questionnaire.qml</file>
     </qresource>
 </RCC>

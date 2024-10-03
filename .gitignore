@@ -7,6 +7,7 @@ Makefile
 *.cmake
 
 # Qt specific
+*.txt.user
 *.pro.user
 *.pro.user.*
 *.moc
