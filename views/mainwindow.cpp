@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->questionOptionListWidget->item(1)->setData(Qt::UserRole, EditQuestions);
 
     ui->quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
-    ui->quickWidget->setSource(QUrl(QStringLiteral("qrc:/qml/questionnaire.qml")));
+    ui->quickWidget->setSource(QUrl(QStringLiteral("qrc:/qml/QuestionView.qml")));
     if (ui->quickWidget->status() == QQuickWidget::Error)
     {
         qWarning() << "Error loading QML:" << ui->quickWidget->errors();
