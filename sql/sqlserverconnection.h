@@ -2,6 +2,7 @@
 #define SQLSERVERCONNECTION_H
 
 #include "../models/question.h"
+#include "../models/candidate.h"
 
 #include <QSqlDatabase>
 
@@ -23,9 +24,13 @@ public:
      */
     static bool insertQuestion(const Question &question);
 
+    static bool insertCandidate(const Candidate &candidate);
+
     static void insertDefaultData();
 
     static std::vector<Question> selectQuestions();
+
+    static int totalPoints();
 private:
     SqlServerConnection();
     bool connectToSqlServer();

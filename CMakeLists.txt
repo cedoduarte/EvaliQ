@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick QuickWidgets Sql)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick QuickWidgets Sql)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Quick QuickWidgets QuickControls2 Sql)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick QuickWidgets QuickControls2 Sql)
 
 set(PROJECT_SOURCES
     main.cpp
@@ -29,6 +29,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(EvaliQ
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        views/savecandidatedialog.h views/savecandidatedialog.cpp views/savecandidatedialog.ui
+        models/candidate.h
+        makers/candidatemaker.h makers/candidatemaker.cpp
     )
 else()
     if(ANDROID)
@@ -44,7 +47,8 @@ endif()
 
 target_link_libraries(EvaliQ PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(EvaliQ PRIVATE Qt${QT_VERSION_MAJOR}::Quick)
-target_link_libraries(EvaliQ PRIVATE Qt${QT_VERSION_MAJOR}::QuickWidgets)  # Added for QQuickWidget
+target_link_libraries(EvaliQ PRIVATE Qt${QT_VERSION_MAJOR}::QuickWidgets)
+target_link_libraries(EvaliQ PRIVATE Qt${QT_VERSION_MAJOR}::QuickControls2)
 target_link_libraries(EvaliQ PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
 
 target_include_directories(EvaliQ PRIVATE .)

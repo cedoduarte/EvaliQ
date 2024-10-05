@@ -1,368 +1,374 @@
 [
     {
-      "text": "What is a variable in C#?",
-      "category": "C# Basics",
-      "points": 1,
-      "answer": "A variable in C# is a container for storing data values. It is a named memory location that can hold different types of data, such as numbers, text, or more complex objects."
+        "text": "What is a variable in C#?",
+        "category": "C# Basics",
+        "points": 1,
+        "answer": "A variable in C# is a container for storing data values. It is a named memory location that can hold different types of data, such as numbers, text, or more complex objects."
     },
     {
-      "text": "Please tell me the main concepts of Object-Oriented Programming.",
-      "category": "OOP Concepts",
-      "points": 2,
-      "answer": "The main concepts of Object-Oriented Programming are: Encapsulation, Inheritance, Polymorphism, and Abstraction."
+        "text": "Please tell me the main concepts of Object-Oriented Programming.",
+        "category": "OOP Concepts",
+        "points": 2,
+        "answer": "The main concepts of Object-Oriented Programming are: Encapsulation, Inheritance, Polymorphism, and Abstraction."
     },
     {
-      "text": "What is the difference between an 'object' and a 'class' in C#?",
-      "category": "C# OOP",
-      "points": 3,
-      "answer": "A class is a blueprint or template that defines the structure and behavior of objects. An object is an instance of a class, representing a specific entity with its own set of data and behaviors based on the class definition."
+        "text": "What is the difference between an 'object' and a 'class' in C#?",
+        "category": "C# OOP",
+        "points": 3,
+        "answer": "A class is a blueprint or template that defines the structure and behavior of objects. An object is an instance of a class, representing a specific entity with its own set of data and behaviors based on the class definition."
     },
     {
-      "text": "What is a constructor of a class in C#?",
-      "category": "C# OOP",
-      "points": 3,
-      "answer": "A constructor is a special method in a class that is automatically called when an object of that class is created. It is used to initialize the object's state and can accept parameters to set initial values for the object's properties."
+        "text": "What is a constructor of a class in C#?",
+        "category": "C# OOP",
+        "points": 3,
+        "answer": "A constructor is a special method in a class that is automatically called when an object of that class is created. It is used to initialize the object's state and can accept parameters to set initial values for the object's properties."
     },
     {
-      "text": "What is the difference between 'override' and 'overload' in C#?",
-      "category": "C# OOP",
-      "points": 3,
-      "answer": "'Override' is used to provide a new implementation of a method inherited from a base class. 'Overload' refers to defining multiple methods with the same name but different parameters within the same class."
+        "text": "What is the difference between 'override' and 'overload' in C#?",
+        "category": "C# OOP",
+        "points": 3,
+        "answer": "'Override' is used to provide a new implementation of a method inherited from a base class. 'Overload' refers to defining multiple methods with the same name but different parameters within the same class."
     },
     {
-      "text": "Explain 'public', 'private' and 'protected' in C#.",
-      "category": "C# Access Modifiers",
-      "points": 2,
-      "answer": "'Public' members are accessible from anywhere. 'Private' members are only accessible within the same class. 'Protected' members are accessible within the same class and its derived classes."
+        "text": "Explain 'public', 'private' and 'protected' in C#.",
+        "category": "C# Access Modifiers",
+        "points": 2,
+        "answer": "'Public' members are accessible from anywhere. 'Private' members are only accessible within the same class. 'Protected' members are accessible within the same class and its derived classes."
     },
     {
-      "text": "What is the difference between 'abstract class' and 'interface' in C#?",
-      "category": "C# OOP",
-      "points": 4,
-      "answer": "An abstract class can have implemented methods and fields, while an interface can only have method signatures and properties. A class can inherit from only one abstract class but can implement multiple interfaces."
+        "text": "What is the difference between 'abstract class' and 'interface' in C#?",
+        "category": "C# OOP",
+        "points": 4,
+        "answer": "An abstract class can have implemented methods and fields, while an interface can only have method signatures and properties. A class can inherit from only one abstract class but can implement multiple interfaces."
     },
     {
-      "text": "What is the difference between 'private' and 'protected' in C#?",
-      "category": "C# Access Modifiers",
-      "points": 2,
-      "answer": "'Private' members are only accessible within the same class, while 'protected' members are accessible within the same class and its derived classes."
+        "text": "What is the difference between 'private' and 'protected' in C#?",
+        "category": "C# Access Modifiers",
+        "points": 2,
+        "answer": "'Private' members are only accessible within the same class, while 'protected' members are accessible within the same class and its derived classes."
     },
     {
-      "text": "Is it correct to use the 'public' modifier in a class to encapsulate a member?",
-      "category": "C# OOP",
-      "points": 2,
-      "answer": "No, it's not correct. Using 'public' goes against the principle of encapsulation. To encapsulate a member, you should use 'private' or 'protected' modifiers and provide public methods to access or modify the data if necessary."
+        "text": "Is it correct to use the 'public' modifier in a class to encapsulate a member?",
+        "category": "C# OOP",
+        "points": 2,
+        "answer": "No, it's not correct. Using 'public' goes against the principle of encapsulation. To encapsulate a member, you should use 'private' or 'protected' modifiers and provide public methods to access or modify the data if necessary."
     },
     {
-      "text": "What is the difference between 'readonly' and 'const' in C#?",
-      "category": "C# Basics",
-      "points": 3,
-      "answer": "'Readonly' fields can be assigned a value at runtime in the constructor, while 'const' values must be assigned at compile-time. 'Const' is implicitly static, while 'readonly' can be instance-specific."
+        "text": "What is the difference between 'readonly' and 'const' in C#?",
+        "category": "C# Basics",
+        "points": 3,
+        "answer": "'Readonly' fields can be assigned a value at runtime in the constructor, while 'const' values must be assigned at compile-time. 'Const' is implicitly static, while 'readonly' can be instance-specific."
     },
     {
-      "text": "What is 'boxing' and 'unboxing' in C#?",
-      "category": "C# Basics",
-      "points": 3,
-      "answer": "Boxing is the process of converting a value type to an object type. Unboxing is the reverse process of extracting the value type from the object type."
+        "text": "What is 'boxing' and 'unboxing' in C#?",
+        "category": "C# Basics",
+        "points": 3,
+        "answer": "Boxing is the process of converting a value type to an object type. Unboxing is the reverse process of extracting the value type from the object type."
     },
     {
-      "text": "What is an 'array' in C#?",
-      "category": "C# Data Structures",
-      "points": 2,
-      "answer": "An array in C# is a fixed-size collection of elements of the same data type, stored in contiguous memory locations. It provides indexed access to its elements."
+        "text": "What is an 'array' in C#?",
+        "category": "C# Data Structures",
+        "points": 2,
+        "answer": "An array in C# is a fixed-size collection of elements of the same data type, stored in contiguous memory locations. It provides indexed access to its elements."
     },
     {
-      "text": "What is an extension method used for in C#?",
-      "category": "C# Advanced",
-      "points": 2,
-      "answer": "Extension methods allow you to add new methods to existing types without modifying the original type. They are defined as static methods but can be called as if they were instance methods on the extended type."
+        "text": "What is an extension method used for in C#?",
+        "category": "C# Advanced",
+        "points": 2,
+        "answer": "Extension methods allow you to add new methods to existing types without modifying the original type. They are defined as static methods but can be called as if they were instance methods on the extended type."
     },
     {
-      "text": "Please tell me one generic collection class in C#?",
-      "category": "C# Data Structures",
-      "points": 2,
-      "answer": "One generic collection class in C# is List<T>, where T is the type of elements stored in the list."
+        "text": "Please tell me one generic collection class in C#?",
+        "category": "C# Data Structures",
+        "points": 2,
+        "answer": "One generic collection class in C# is List<T>, where T is the type of elements stored in the list."
     },
     {
-      "text": "What is 'foreach' used for in C#?",
-      "category": "C# Basics",
-      "points": 2,
-      "answer": "'foreach' is used to iterate over elements in a collection or array. It provides a simple and readable way to access each item in the collection without needing to manage an index or loop counter."
+        "text": "What is 'foreach' used for in C#?",
+        "category": "C# Basics",
+        "points": 2,
+        "answer": "'foreach' is used to iterate over elements in a collection or array. It provides a simple and readable way to access each item in the collection without needing to manage an index or loop counter."
     },
     {
-      "text": "Which are the REST HTTP methods?",
-      "category": "Web Development",
-      "points": 3,
-      "answer": "The main REST HTTP methods are GET, POST, PUT, PATCH, DELETE, and OPTIONS."
+        "text": "Please tell me one design pattern in C#?",
+        "category": "C# Advanced",
+        "points": 1,
+        "answer": "Singleton, Factory, or Observer"
     },
     {
-      "text": "Please tell me one usage of 'middleware' in .NET C# Web API?",
-      "category": "Web Development",
-      "points": 3,
-      "answer": "One usage of middleware in .NET C# Web API is to handle cross-cutting concerns such as authentication, logging, or error handling across multiple endpoints."
+        "text": "Which are the REST HTTP methods?",
+        "category": "Web Development",
+        "points": 3,
+        "answer": "The main REST HTTP methods are GET, POST, PUT, PATCH, DELETE, and OPTIONS."
     },
     {
-      "text": "What is the 'GET' HTTP method used for?",
-      "category": "Web Development",
-      "points": 2,
-      "answer": "The GET HTTP method is used to retrieve a resource from the server. It should not have any side effects on the server and should be idempotent."
+        "text": "Please tell me one usage of 'middleware' in .NET C# Web API?",
+        "category": "Web Development",
+        "points": 3,
+        "answer": "One usage of middleware in .NET C# Web API is to handle cross-cutting concerns such as authentication, logging, or error handling across multiple endpoints."
     },
     {
-      "text": "What is the difference between 'POST' and 'PUT'?",
-      "category": "Web Development",
-      "points": 3,
-      "answer": "POST is typically used to create a new resource, while PUT is used to update an existing resource. PUT is idempotent, meaning multiple identical requests should have the same effect as a single request, while POST is not."
+        "text": "What is the 'GET' HTTP method used for?",
+        "category": "Web Development",
+        "points": 2,
+        "answer": "The GET HTTP method is used to retrieve a resource from the server. It should not have any side effects on the server and should be idempotent."
     },
     {
-      "text": "What is the difference between 'PUT' and 'PATCH'?",
-      "category": "Web Development",
-      "points": 3,
-      "answer": "PUT is used to update an entire resource, replacing it entirely, while PATCH is used for partial updates, modifying only specific fields of a resource."
+        "text": "What is the difference between 'POST' and 'PUT'?",
+        "category": "Web Development",
+        "points": 3,
+        "answer": "POST is typically used to create a new resource, while PUT is used to update an existing resource. PUT is idempotent, meaning multiple identical requests should have the same effect as a single request, while POST is not."
     },
     {
-      "text": "What is a DTO in .NET C# Web API?",
-      "category": "Web Development",
-      "points": 4,
-      "answer": "DTO stands for Data Transfer Object. It's a simple object used to transfer data between different layers of an application, often between the client and server in a Web API. DTOs help to decouple the internal data model from the external API representation."
+        "text": "What is the difference between 'PUT' and 'PATCH'?",
+        "category": "Web Development",
+        "points": 3,
+        "answer": "PUT is used to update an entire resource, replacing it entirely, while PATCH is used for partial updates, modifying only specific fields of a resource."
     },
     {
-      "text": "What does MVC mean?",
-      "category": "Web Development",
-      "points": 2,
-      "answer": "MVC stands for Model-View-Controller. It's an architectural pattern that separates an application into three main components: Model (data and business logic), View (user interface), and Controller (handles user input and updates the Model and View)."
+        "text": "What is a DTO in .NET C# Web API?",
+        "category": "Web Development",
+        "points": 4,
+        "answer": "DTO stands for Data Transfer Object. It's a simple object used to transfer data between different layers of an application, often between the client and server in a Web API. DTOs help to decouple the internal data model from the external API representation."
     },
     {
-      "text": "What is Entity Framework in C#?",
-      "category": "C# Database",
-      "points": 4,
-      "answer": "Entity Framework is an object-relational mapping (ORM) framework for .NET. It allows developers to work with relational databases using .NET objects, abstracting away much of the data access code."
+        "text": "What does MVC mean?",
+        "category": "Web Development",
+        "points": 2,
+        "answer": "MVC stands for Model-View-Controller. It's an architectural pattern that separates an application into three main components: Model (data and business logic), View (user interface), and Controller (handles user input and updates the Model and View)."
     },
     {
-      "text": "What is LINQ used for in C#?",
-      "category": "C# Advanced",
-      "points": 4,
-      "answer": "LINQ (Language Integrated Query) is used for querying various types of data sources, including collections, databases, and XML. It provides a consistent syntax for working with data across different data sources."
+        "text": "What is Entity Framework in C#?",
+        "category": "C# Database",
+        "points": 4,
+        "answer": "Entity Framework is an object-relational mapping (ORM) framework for .NET. It allows developers to work with relational databases using .NET objects, abstracting away much of the data access code."
     },
     {
-      "text": "What are the three lifetimes of services in Dependency Injection in C#?",
-      "category": "C# Advanced",
-      "points": 4,
-      "answer": "Transient, scoped and singleton."
+        "text": "What is LINQ used for in C#?",
+        "category": "C# Advanced",
+        "points": 4,
+        "answer": "LINQ (Language Integrated Query) is used for querying various types of data sources, including collections, databases, and XML. It provides a consistent syntax for working with data across different data sources."
     },
     {
-      "text": "What is unit testing used for in C#?",
-      "category": "C# Testing",
-      "points": 4,
-      "answer": "Unit testing is used to test individual components or functions of a program in isolation. It helps ensure that each part of the code works correctly, improves code quality, and makes it easier to refactor and maintain code."
+        "text": "What are the three lifetimes of services in Dependency Injection in C#?",
+        "category": "C# Advanced",
+        "points": 4,
+        "answer": "Transient, scoped and singleton."
     },
     {
-      "text": "What is SQL Server?",
-      "category": "Database",
-      "points": 1,
-      "answer": "SQL Server is a relational database management system (RDBMS) developed by Microsoft. It's used for storing, retrieving, and managing structured data."
+        "text": "What is unit testing used for in C#?",
+        "category": "C# Testing",
+        "points": 4,
+        "answer": "Unit testing is used to test individual components or functions of a program in isolation. It helps ensure that each part of the code works correctly, improves code quality, and makes it easier to refactor and maintain code."
     },
     {
-      "text": "What is a 'primary key' in SQL Server?",
-      "category": "Database",
-      "points": 2,
-      "answer": "A primary key is a column or set of columns in a table that uniquely identifies each row. It ensures data integrity and provides a way to relate data across multiple tables."
+        "text": "What is SQL Server?",
+        "category": "Database",
+        "points": 1,
+        "answer": "SQL Server is a relational database management system (RDBMS) developed by Microsoft. It's used for storing, retrieving, and managing structured data."
     },
     {
-      "text": "What is a 'foreign key' in SQL Server?",
-      "category": "Database",
-      "points": 2,
-      "answer": "A foreign key is a column or set of columns in one table that refers to the primary key in another table. It establishes a link between the data in two tables, maintaining referential integrity."
+        "text": "What is a 'primary key' in SQL Server?",
+        "category": "Database",
+        "points": 2,
+        "answer": "A primary key is a column or set of columns in a table that uniquely identifies each row. It ensures data integrity and provides a way to relate data across multiple tables."
     },
     {
-      "text": "Are you familiar with 'stored procedures'?",
-      "category": "Database",
-      "points": 2,
-      "answer": "Yes, stored procedures are precompiled SQL statements stored in the database. They can accept parameters, perform operations, and return results, improving performance and allowing for code reuse."
+        "text": "What is a 'foreign key' in SQL Server?",
+        "category": "Database",
+        "points": 2,
+        "answer": "A foreign key is a column or set of columns in one table that refers to the primary key in another table. It establishes a link between the data in two tables, maintaining referential integrity."
     },
     {
-      "text": "What is 'INNER JOIN' used for?",
-      "category": "Database",
-      "points": 3,
-      "answer": "INNER JOIN is used to combine rows from two or more tables based on a related column between them. It returns only the rows where there is a match in both tables."
+        "text": "Are you familiar with 'stored procedures'?",
+        "category": "Database",
+        "points": 2,
+        "answer": "Yes, stored procedures are precompiled SQL statements stored in the database. They can accept parameters, perform operations, and return results, improving performance and allowing for code reuse."
     },
     {
-      "text": "What is the difference between 'let' and 'const' in JavaScript?",
-      "category": "JavaScript",
-      "points": 2,
-      "answer": "'let' declares a block-scoped variable that can be reassigned, while 'const' declares a block-scoped variable that cannot be reassigned after its initial assignment."
+        "text": "What is 'INNER JOIN' used for?",
+        "category": "Database",
+        "points": 3,
+        "answer": "INNER JOIN is used to combine rows from two or more tables based on a related column between them. It returns only the rows where there is a match in both tables."
     },
     {
-      "text": "What is the scope of 'var' in JavaScript?",
-      "category": "JavaScript",
-      "points": 2,
-      "answer": "'var' has function scope or global scope, but not block scope. It is hoisted to the top of its containing function or global scope."
+        "text": "What is the difference between 'let' and 'const' in JavaScript?",
+        "category": "JavaScript",
+        "points": 2,
+        "answer": "'let' declares a block-scoped variable that can be reassigned, while 'const' declares a block-scoped variable that cannot be reassigned after its initial assignment."
     },
     {
-      "text": "Please tell me one array method in JavaScript.",
-      "category": "JavaScript",
-      "points": 2,
-      "answer": "One array method in JavaScript is 'push()', which adds one or more elements to the end of an array and returns the new length of the array."
+        "text": "What is the scope of 'var' in JavaScript?",
+        "category": "JavaScript",
+        "points": 2,
+        "answer": "'var' has function scope or global scope, but not block scope. It is hoisted to the top of its containing function or global scope."
     },
     {
-      "text": "What does JSON mean?",
-      "category": "Web Development",
-      "points": 1,
-      "answer": "JSON stands for JavaScript Object Notation. It's a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate."
+        "text": "Please tell me one array method in JavaScript.",
+        "category": "JavaScript",
+        "points": 2,
+        "answer": "One array method in JavaScript is 'push()', which adds one or more elements to the end of an array and returns the new length of the array."
     },
     {
-      "text": "What is 'fetch' used for in JavaScript?",
-      "category": "JavaScript",
-      "points": 2,
-      "answer": "'fetch' is used to make network requests, typically to retrieve resources from a server. It returns a Promise that resolves to the Response to that request."
+        "text": "What does JSON mean?",
+        "category": "Web Development",
+        "points": 1,
+        "answer": "JSON stands for JavaScript Object Notation. It's a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate."
     },
     {
-      "text": "Which keyword is used for inheritance in JavaScript?",
-      "category": "JavaScript",
-      "points": 2,
-      "answer": "The 'extends' keyword is used for inheritance in JavaScript classes."
+        "text": "What is 'fetch' used for in JavaScript?",
+        "category": "JavaScript",
+        "points": 2,
+        "answer": "'fetch' is used to make network requests, typically to retrieve resources from a server. It returns a Promise that resolves to the Response to that request."
     },
     {
-      "text": "What is an interface in TypeScript?",
-      "category": "TypeScript",
-      "points": 3,
-      "answer": "An interface in TypeScript is a way to define a contract for an object's shape. It specifies the properties and methods an object should have, without providing implementations."
+        "text": "Which keyword is used for inheritance in JavaScript?",
+        "category": "JavaScript",
+        "points": 2,
+        "answer": "The 'extends' keyword is used for inheritance in JavaScript classes."
     },
     {
-      "text": "What is a component in a single-page application?",
-      "category": "Web Development",
-      "points": 3,
-      "answer": "A component in a single-page application is a reusable, self-contained piece of UI that encapsulates its own template, logic, and sometimes styling. Components can be composed together to build complex user interfaces."
+        "text": "What is an interface in TypeScript?",
+        "category": "TypeScript",
+        "points": 3,
+        "answer": "An interface in TypeScript is a way to define a contract for an object's shape. It specifies the properties and methods an object should have, without providing implementations."
     },
     {
-      "text": "Please tell me one directive used in Angular.",
-      "category": "Angular",
-      "points": 2,
-      "answer": "One directive used in Angular is '*ngFor', which is used for iterating over a collection and rendering elements for each item."
+        "text": "What is a component in a single-page application?",
+        "category": "Web Development",
+        "points": 3,
+        "answer": "A component in a single-page application is a reusable, self-contained piece of UI that encapsulates its own template, logic, and sometimes styling. Components can be composed together to build complex user interfaces."
     },
     {
-      "text": "Does Angular allow dependency injection?",
-      "category": "Angular",
-      "points": 2,
-      "answer": "Yes, Angular has a built-in dependency injection system that allows you to declare dependencies for your components, services, and other classes."
+        "text": "Please tell me one directive used in Angular.",
+        "category": "Angular",
+        "points": 2,
+        "answer": "One directive used in Angular is '*ngFor', which is used for iterating over a collection and rendering elements for each item."
     },
     {
-      "text": "What is HttpClient class used for in Angular?",
-      "category": "Angular",
-      "points": 4,
-      "answer": "HttpClient is used in Angular to make HTTP requests to remote servers. It provides a simplified API for performing HTTP operations and returns observables for handling responses."
+        "text": "Does Angular allow dependency injection?",
+        "category": "Angular",
+        "points": 2,
+        "answer": "Yes, Angular has a built-in dependency injection system that allows you to declare dependencies for your components, services, and other classes."
     },
     {
-      "text": "What is the command to run an Angular application?",
-      "category": "Angular",
-      "points": 1,
-      "answer": "The command to run an Angular application is 'ng serve'."
+        "text": "What is HttpClient class used for in Angular?",
+        "category": "Angular",
+        "points": 4,
+        "answer": "HttpClient is used in Angular to make HTTP requests to remote servers. It provides a simplified API for performing HTTP operations and returns observables for handling responses."
     },
     {
-      "text": "What is an observable in Angular?",
-      "category": "Angular",
-      "points": 3,
-      "answer": "An observable in Angular is a sequence of events or values over time. It's used for handling asynchronous operations and can emit multiple values, unlike promises which resolve to a single value."
+        "text": "What is the command to run an Angular application?",
+        "category": "Angular",
+        "points": 1,
+        "answer": "The command to run an Angular application is 'ng serve'."
     },
     {
-      "text": "What is interpolation used for in an HTML template in Angular?",
-      "category": "Angular",
-      "points": 2,
-      "answer": "Interpolation is used to display values from the component's properties in the HTML template. It's denoted by double curly braces {{ }}."
+        "text": "What is an observable in Angular?",
+        "category": "Angular",
+        "points": 3,
+        "answer": "An observable in Angular is a sequence of events or values over time. It's used for handling asynchronous operations and can emit multiple values, unlike promises which resolve to a single value."
     },
     {
-      "text": "Please tell me one hook used in Angular.",
-      "category": "Angular",
-      "points": 2,
-      "answer": "One hook used in Angular is 'ngOnInit', which is called after the component is initialized and its bindings are resolved."
+        "text": "What is interpolation used for in an HTML template in Angular?",
+        "category": "Angular",
+        "points": 2,
+        "answer": "Interpolation is used to display values from the component's properties in the HTML template. It's denoted by double curly braces {{ }}."
     },
     {
-      "text": "Which decorator is used for declaring an event in Angular?",
-      "category": "Angular",
-      "points": 3,
-      "answer": "The '@Output()' decorator is used for declaring an event in Angular. It allows a component to emit custom events."
+        "text": "Please tell me one hook used in Angular.",
+        "category": "Angular",
+        "points": 2,
+        "answer": "One hook used in Angular is 'ngOnInit', which is called after the component is initialized and its bindings are resolved."
     },
     {
-      "text": "What does CSS mean?",
-      "category": "Web Development",
-      "points": 1,
-      "answer": "CSS stands for Cascading Style Sheets"
+        "text": "Which decorator is used for declaring an event in Angular?",
+        "category": "Angular",
+        "points": 3,
+        "answer": "The '@Output()' decorator is used for declaring an event in Angular. It allows a component to emit custom events."
     },
     {
-      "text": "Please tell me three properties we can use in CSS.",
-      "category": "CSS",
-      "points": 2,
-      "answer": "Three CSS properties are: color, font-size, and margin."
+        "text": "What does CSS mean?",
+        "category": "Web Development",
+        "points": 1,
+        "answer": "CSS stands for Cascading Style Sheets"
     },
     {
-      "text": "What is a possible value for the property \"float\" in CSS?",
-      "category": "CSS",
-      "points": 2,
-      "answer": "A possible value for the \"float\" property is \"left\"."
+        "text": "Please tell me three properties we can use in CSS.",
+        "category": "CSS",
+        "points": 2,
+        "answer": "Three CSS properties are: color, font-size, and margin."
     },
     {
-      "text": "What is responsive web design?",
-      "category": "Web Design",
-      "points": 3,
-      "answer": "Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes."
+        "text": "What is a possible value for the property \"float\" in CSS?",
+        "category": "CSS",
+        "points": 2,
+        "answer": "A possible value for the \"float\" property is \"left\"."
     },
     {
-      "text": "What are media queries used for in CSS?",
-      "category": "CSS",
-      "points": 3,
-      "answer": "Media queries are used in CSS to apply different styles for different media types/devices, allowing for responsive design."
+        "text": "What is responsive web design?",
+        "category": "Web Design",
+        "points": 3,
+        "answer": "Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes."
     },
     {
-      "text": "What is \"git\" used for?",
-      "category": "Version Control",
-      "points": 1,
-      "answer": "Git is used for version control and tracking changes in computer files."
+        "text": "What are media queries used for in CSS?",
+        "category": "CSS",
+        "points": 3,
+        "answer": "Media queries are used in CSS to apply different styles for different media types/devices, allowing for responsive design."
     },
     {
-      "text": "What is the \"git merge\" command used for?",
-      "category": "Git",
-      "points": 2,
-      "answer": "The \"git merge\" command is used to integrate changes from another branch into the current branch."
+        "text": "What is \"git\" used for?",
+        "category": "Version Control",
+        "points": 1,
+        "answer": "Git is used for version control and tracking changes in computer files."
     },
     {
-      "text": "What is the \"git branch\" command used for?",
-      "category": "Git",
-      "points": 2,
-      "answer": "The \"git branch\" command is used to list, create, or delete branches in a Git repository."
+        "text": "What is the \"git merge\" command used for?",
+        "category": "Git",
+        "points": 2,
+        "answer": "The \"git merge\" command is used to integrate changes from another branch into the current branch."
     },
     {
-      "text": "What is the \"git push\" command used for?",
-      "category": "Git",
-      "points": 2,
-      "answer": "The \"git push\" command is used to upload local repository content to a remote repository."
+        "text": "What is the \"git branch\" command used for?",
+        "category": "Git",
+        "points": 2,
+        "answer": "The \"git branch\" command is used to list, create, or delete branches in a Git repository."
     },
     {
-      "text": "What is the \"git checkout\" command used for?",
-      "category": "Git",
-      "points": 2,
-      "answer": "The \"git checkout\" command is used to switch branches or restore working tree files."
+        "text": "What is the \"git push\" command used for?",
+        "category": "Git",
+        "points": 2,
+        "answer": "The \"git push\" command is used to upload local repository content to a remote repository."
     },
     {
-      "text": "What is the \"gitignore\" file used for?",
-      "category": "Git",
-      "points": 1,
-      "answer": "The \".gitignore\" file is used to specify intentionally untracked files that Git should ignore."
+        "text": "What is the \"git checkout\" command used for?",
+        "category": "Git",
+        "points": 2,
+        "answer": "The \"git checkout\" command is used to switch branches or restore working tree files."
     },
     {
-      "text": "Are you familiar with Scrum or Kanban?",
-      "category": "Agile Methodologies",
-      "points": 2,
-      "answer": "Yes, Scrum and Kanban are both popular Agile project management methodologies used in software development."
+        "text": "What is the \"gitignore\" file used for?",
+        "category": "Git",
+        "points": 1,
+        "answer": "The \".gitignore\" file is used to specify intentionally untracked files that Git should ignore."
     },
     {
-      "text": "What does PBI mean?",
-      "category": "Agile Methodologies",
-      "points": 3,
-      "answer": "PBI stands for Product Backlog Item, which is a unit of work in Scrum methodology."
+        "text": "Are you familiar with Scrum or Kanban?",
+        "category": "Agile Methodologies",
+        "points": 2,
+        "answer": "Yes, Scrum and Kanban are both popular Agile project management methodologies used in software development."
     },
     {
-      "text": "What is a \"bug\"?",
-      "category": "Software Development",
-      "points": 3,
-      "answer": "A bug is an error, flaw, or fault in a computer program that causes it to produce an incorrect or unexpected result, or to behave in unintended ways."
+        "text": "What does PBI mean?",
+        "category": "Agile Methodologies",
+        "points": 3,
+        "answer": "PBI stands for Product Backlog Item, which is a unit of work in Scrum methodology."
+    },
+    {
+        "text": "What is a \"bug\"?",
+        "category": "Software Development",
+        "points": 3,
+        "answer": "A bug is an error, flaw, or fault in a computer program that causes it to produce an incorrect or unexpected result, or to behave in unintended ways."
     }
 ]

@@ -3,12 +3,14 @@
 #include "../sql/sqlserverconnection.h"
 #include "../makers/questionmaker.h"
 #include "../enums/enums.h"
+#include "savecandidatedialog.h"
 
 #include <QListWidgetItem>
 #include <QCloseEvent>
 #include <QSqlTableModel>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -61,6 +63,13 @@ QVariantList MainWindow::getQuestions()
     return questionArray;
 }
 
+void MainWindow::setGainedPoints(int points)
+{
+    m_gainedPoints = points;
+    ui->txtGainedPoints->setText(QString::number(points));
+    computeRating();
+}
+
 void MainWindow::on_actionClose_triggered()
 {
     close();
@@ -100,3 +109,33 @@ void MainWindow::on_questionOptionListWidget_itemClicked(QListWidgetItem *item)
     }
 }
 
+void MainWindow::computeRating()
+{
+    int totalPossiblePoints = SqlServerConnection::totalPoints();
+    m_rating = double(m_gainedPoints) / double(totalPossiblePoints) * 100.0;
+    ui->txtRating->setText(QString("%1%").arg(m_rating));
+}
+
+void MainWindow::on_buttonSaveCandidateResult_clicked()
+{
+    if (ui->txtGainedPoints->text().isEmpty() || ui->txtRating->text().isEmpty())
+    {
+        return;
+    }
+    SaveCandidateDialog saveDialog(this);
+    saveDialog.setGainedPoints(m_gainedPoints);
+    saveDialog.setRating(m_rating);
+    if (saveDialog.exec() == QDialog::Accepted)
+    {
+        Candidate candidate = saveDialog.getCandidate();
+        if (candidate.getFirstName().isEmpty() || candidate.getLastName().isEmpty())
+        {
+            QMessageBox::critical(this, "Error", "The first name or last name is empty!");
+            return;
+        }
+        if (SqlServerConnection::insertCandidate(candidate))
+        {
+            QMessageBox::information(this, "OK", "Operation concluded successfully!");
+        }
+    }
+}

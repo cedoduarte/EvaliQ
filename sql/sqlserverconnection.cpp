@@ -41,9 +41,32 @@ bool SqlServerConnection::insertQuestion(const Question &question)
     query.bindValue(":answer", question.getAnswer());
     if (!query.exec())
     {
-        qWarning() << "Error inserting question:" << query.lastError().text();
+        qDebug() << "Error inserting question:" << query.lastError().text();
         return false;
     }
+    return true;
+}
+
+bool SqlServerConnection::insertCandidate(const Candidate &candidate)
+{
+    QSqlQuery query(s_instance->m_db);
+
+    // Prepare the SQL insert statement
+    query.prepare("INSERT INTO Candidate (FirstName, LastName, GainedPoints, Rating) "
+                  "VALUES (:firstName, :lastName, :gainedPoints, :rating)");
+
+    // Bind values from the Candidate object
+    query.bindValue(":firstName", candidate.getFirstName());
+    query.bindValue(":lastName", candidate.getLastName());
+    query.bindValue(":gainedPoints", candidate.getGainedPoints());
+    query.bindValue(":rating", candidate.getRating());
+
+    // Execute the query
+    if (!query.exec()) {
+        qDebug() << "Error inserting candidate:" << query.lastError().text();
+        return false;
+    }
+
     return true;
 }
 
@@ -53,7 +76,7 @@ bool SqlServerConnection::hasRows(const QString &tableName)
     query.prepare(QString("SELECT COUNT(*) FROM %1").arg(tableName));
     if (!query.exec())
     {
-        qWarning() << "Error executing query:" << query.lastError();
+        qDebug() << "Error executing query:" << query.lastError();
         return false;
     }
     if (query.next())
@@ -99,6 +122,16 @@ std::vector<Question> SqlServerConnection::selectQuestions()
                                                             query.value("answerText").toString()));
     }
     return questionArray;
+}
+
+int SqlServerConnection::totalPoints()
+{
+    QSqlQuery query;
+    query.prepare("SELECT sum(Ponderation) FROM Question");
+    query.exec();
+    query.next();
+    int totalPossiblePoints = query.value(0).toInt();
+    return totalPossiblePoints;
 }
 
 SqlServerConnection::SqlServerConnection() {}

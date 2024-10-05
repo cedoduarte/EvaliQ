@@ -23,6 +23,7 @@ protected:
     void closeEvent(QCloseEvent *event) override;
 public slots:
     QVariantList getQuestions();
+    void setGainedPoints(int points);
 private slots:
     void on_actionClose_triggered();
 
@@ -32,9 +33,15 @@ private slots:
 
     void on_questionOptionListWidget_itemClicked(QListWidgetItem *item);
 
+    void on_buttonSaveCandidateResult_clicked();
+
 private:
+    void computeRating();
+
     Ui::MainWindow *ui;
     QSqlTableModel *m_questionModel;
+    int m_gainedPoints;
+    double m_rating;
 };
 
 #endif // MAINWINDOW_H

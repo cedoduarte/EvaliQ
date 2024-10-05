@@ -1,0 +1,7 @@
+CREATE TABLE Candidate (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName NVARCHAR(MAX) NOT NULL,
+    LastName NVARCHAR(MAX) NOT NULL,
+    GainedPoints INT NOT NULL,
+    Rating FLOAT NOT NULL
+);
