@@ -11,14 +11,18 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>EvaliQ</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res.qrc">
+    <normaloff>:/img/chart.png</normaloff>:/img/chart.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -78,6 +82,10 @@
           <property name="text">
            <string>Save</string>
           </property>
+          <property name="icon">
+           <iconset resource="../res.qrc">
+            <normaloff>:/img/ok.png</normaloff>:/img/ok.png</iconset>
+          </property>
          </widget>
         </item>
        </layout>
@@ -103,10 +111,18 @@
             <property name="text">
              <string>Insert question</string>
             </property>
+            <property name="icon">
+             <iconset resource="../res.qrc">
+              <normaloff>:/img/add.png</normaloff>:/img/add.png</iconset>
+            </property>
            </item>
            <item>
             <property name="text">
              <string>Edit questions</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../res.qrc">
+              <normaloff>:/img/edit.png</normaloff>:/img/edit.png</iconset>
             </property>
            </item>
           </widget>
@@ -197,6 +213,10 @@
                  <property name="text">
                   <string>Insert</string>
                  </property>
+                 <property name="icon">
+                  <iconset resource="../res.qrc">
+                   <normaloff>:/img/ok.png</normaloff>:/img/ok.png</iconset>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -235,6 +255,16 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Candidates</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="QTableView" name="candidateTableView"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -258,6 +288,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionClose">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::ApplicationExit"/>
+   </property>
    <property name="text">
     <string>Close</string>
    </property>
@@ -270,6 +303,8 @@
    <header location="global">QtQuickWidgets/QQuickWidget</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../res.qrc"/>
+ </resources>
  <connections/>
 </ui>

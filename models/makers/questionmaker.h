@@ -1,7 +1,7 @@
 #ifndef QUESTIONMAKER_H
 #define QUESTIONMAKER_H
 
-#include "../models/question.h"
+#include "../question.h"
 
 /**
  * @class QuestionMaker

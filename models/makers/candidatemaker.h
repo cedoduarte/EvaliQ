@@ -1,7 +1,7 @@
 #ifndef CANDIDATEMAKER_H
 #define CANDIDATEMAKER_H
 
-#include "../models/candidate.h"
+#include "../candidate.h"
 
 /**
  * @class CandidateMaker

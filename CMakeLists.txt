@@ -34,8 +34,8 @@ set(PROJECT_SOURCES
     sql/sqlserverconnection.h sql/sqlserverconnection.cpp
     models/question.h
     models/candidate.h
-    makers/questionmaker.h makers/questionmaker.cpp
-    makers/candidatemaker.h makers/candidatemaker.cpp
+    models/makers/questionmaker.h models/makers/questionmaker.cpp
+    models/makers/candidatemaker.h models/makers/candidatemaker.cpp
     enums/enums.h
     json/jsonfilereader.h json/jsonfilereader.cpp
     res.qrc

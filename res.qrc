@@ -2,5 +2,10 @@
     <qresource prefix="/">
         <file>json/questions.json</file>
         <file>qml/QuestionView.qml</file>
+        <file>img/add.png</file>
+        <file>img/edit.png</file>
+        <file>img/remove.png</file>
+        <file>img/ok.png</file>
+        <file>img/chart.png</file>
     </qresource>
 </RCC>

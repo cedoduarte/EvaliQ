@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "../sql/sqlserverconnection.h"
-#include "../makers/questionmaker.h"
+#include "../models/makers/questionmaker.h"
 #include "../enums/enums.h"
 #include "savecandidatedialog.h"
 
@@ -11,6 +11,8 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QMessageBox>
+#include <QDebug>
+#include <QAction>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,6 +26,21 @@ MainWindow::MainWindow(QWidget *parent)
     m_questionModel->setTable("Question");
     m_questionModel->select();
     ui->questionTableView->setModel(m_questionModel);
+    ui->questionTableView->setContextMenuPolicy(Qt::ActionsContextMenu);
+    m_deleteQuestionAction = new QAction("Delete", this);
+    m_deleteQuestionAction->setIcon(QIcon(":/img/remove.png"));
+    ui->questionTableView->addAction(m_deleteQuestionAction);
+    connect(m_deleteQuestionAction, &QAction::triggered, this, &MainWindow::handleDeleteQuestion);
+
+    m_candidateModel = new QSqlTableModel(this);
+    m_candidateModel->setTable("Candidate");
+    m_candidateModel->select();
+    ui->candidateTableView->setModel(m_candidateModel);
+    ui->candidateTableView->setContextMenuPolicy(Qt::ActionsContextMenu);
+    m_deleteCandidateAction = new QAction("Delete", this);
+    m_deleteCandidateAction->setIcon(QIcon(":/img/remove.png"));
+    ui->candidateTableView->addAction(m_deleteCandidateAction);
+    connect(m_deleteCandidateAction, &QAction::triggered, this, &MainWindow::handleDeleteCandidate);
 
     ui->questionOptionListWidget->item(0)->setData(Qt::UserRole, InsertQuestion);
     ui->questionOptionListWidget->item(1)->setData(Qt::UserRole, EditQuestions);
@@ -35,6 +52,17 @@ MainWindow::MainWindow(QWidget *parent)
         qWarning() << "Error loading QML:" << ui->quickWidget->errors();
     }
     ui->quickWidget->engine()->rootContext()->setContextProperty("mainWindow", this);
+
+
+    // Set initial sizes, 116px for the first widget, and the second one gets the remaining space
+    QList<int> sizes;
+    sizes << 140 << 1;  // First widget gets 116px, second gets some small size initially
+    ui->splitter->setSizes(sizes);
+
+    // Set the second widget to stretch and take up the remaining space
+    ui->splitter->setStretchFactor(0, 0);  // First widget doesn't stretch
+    ui->splitter->setStretchFactor(1, 1);  // Second widget stretches to take remaining space
+
 }
 
 MainWindow::~MainWindow()
@@ -82,6 +110,7 @@ void MainWindow::on_buttonInsertQuestion_clicked()
                                                                         ui->txtQuestionPonderation->text().toDouble(),
                                                                         ui->txtQuestionAnswerText->toPlainText())))
     {
+        emit questionTableUpdated();
         ui->statusbar->showMessage("Question inserted...");
     }
     else
@@ -136,6 +165,39 @@ void MainWindow::on_buttonSaveCandidateResult_clicked()
         if (SqlServerConnection::insertCandidate(candidate))
         {
             QMessageBox::information(this, "OK", "Operation concluded successfully!");
+            m_candidateModel->select();
         }
     }
+}
+
+void MainWindow::handleDeleteCandidate()
+{
+    handleDeleteEntity(ui->candidateTableView, m_candidateModel);
+}
+
+void MainWindow::handleDeleteQuestion()
+{
+    if (handleDeleteEntity(ui->questionTableView, m_questionModel))
+    {
+        emit questionTableUpdated();
+    }
+}
+
+bool MainWindow::handleDeleteEntity(QTableView *tableView, QSqlTableModel *tableModel)
+{
+    int row = tableView->currentIndex().row();
+    if (QMessageBox::question(this, "Question",
+        QString("Are you sure to delete the row %1").arg(row+1)) == QMessageBox::Yes)
+    {
+        if (tableModel->removeRows(row, 1))
+        {
+            tableModel->select();
+        }
+        else
+        {
+            QMessageBox::warning(this, "Error", "The row was not deleted!");
+            return false;
+        }
+    }
+    return true;
 }

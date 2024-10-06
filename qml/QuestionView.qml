@@ -33,6 +33,19 @@ Item {
         return null; // Ensure null is returned if mainWindow is undefined
     }
 
+    Connections {
+        target: {
+            if (typeof mainWindow !== "undefined") {
+                return mainWindow;
+            }
+            return null;
+        }
+
+        function onQuestionTableUpdated() {
+            root.questionModel = root.getQuestionModel();
+        }
+    }
+
     /**
      * @property questionModel
      * @brief The model of questions to be displayed in the view.

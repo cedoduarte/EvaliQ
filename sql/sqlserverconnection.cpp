@@ -1,6 +1,6 @@
 #include "sqlserverconnection.h"
 #include "../json/jsonfilereader.h"
-#include "../makers/questionmaker.h"
+#include "../models/makers/questionmaker.h"
 
 #include <QDebug>
 #include <QSqlError>

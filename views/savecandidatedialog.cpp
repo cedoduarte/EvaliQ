@@ -1,6 +1,6 @@
 #include "savecandidatedialog.h"
 #include "ui_savecandidatedialog.h"
-#include "../makers/candidatemaker.h"
+#include "../models/makers/candidatemaker.h"
 
 SaveCandidateDialog::SaveCandidateDialog(QWidget *parent)
     : QDialog(parent)

@@ -6,6 +6,8 @@
 
 class QListWidgetItem;
 class QSqlTableModel;
+class QAction;
+class QTableView;
 
 namespace Ui
 {
@@ -38,6 +40,8 @@ protected:
      * @param event The close event.
      */
     void closeEvent(QCloseEvent *event) override;
+signals:
+    void questionTableUpdated();
 public slots:
     /**
      * @brief Retrieves the list of questions.
@@ -78,16 +82,24 @@ private slots:
      * @brief Handles the button click event for saving the candidate's result.
      */
     void on_buttonSaveCandidateResult_clicked();
+
+    void handleDeleteCandidate();
+    void handleDeleteQuestion();
 private:
     /**
      * @brief Computes the rating based on gained points.
      */
     void computeRating();
 
+    bool handleDeleteEntity(QTableView *tableView, QSqlTableModel *tableModel);
+
     Ui::MainWindow *ui;          ///< Pointer to the UI elements of the MainWindow.
     QSqlTableModel *m_questionModel; ///< Model for managing questions in the database.
+    QSqlTableModel *m_candidateModel;
     int m_gainedPoints;          ///< Points gained by the candidate.
     double m_rating;             ///< Rating of the candidate based on gained points.
+    QAction *m_deleteCandidateAction;
+    QAction *m_deleteQuestionAction;
 };
 
 #endif // MAINWINDOW_H
